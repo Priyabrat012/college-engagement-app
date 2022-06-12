@@ -1,0 +1,82 @@
+<%- include('../partials/header'); -%>
+<!-- 
+    <body>
+        <form action="/blog" method="post">
+            <input type="text" name="title">
+            <input type="text" name="body">
+            <input type="hidden" name="token" id='token' />
+             <input type="hidden" name="author" id='author' />
+            <button type="submit">ADD POST</button>
+        </form>
+    </body>
+
+    <script>
+        let info = JSON.parse(localStorage.getItem('info'));
+        let tokenInput = document.getElementById('token');
+        tokenInput.value = info.token;
+        let authorName = document.getElementById('author');
+        authorName.value = info.username;
+        
+        //console.log(author.value)
+    </script>
+
+    </html> -->
+
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<link rel="stylesheet" href="../public/style2.css" />
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact-form">
+  <div class="contact-image">
+    <img
+      src="https://image.ibb.co/kUagtU/rocket_contact.png"
+      alt="rocket_contact"
+    />
+  </div>
+  <form action="/blog" method="post">
+    <h3>Drop Us a Blog</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="title" />
+        </div>
+        <div class="form-group">
+          <input
+            type="submit"
+            name="btnSubmit"
+            class="btnContact"
+            value="Send Message"
+          />
+        </div>
+        <input type="hidden" name="token" id="token" />
+        <input type="hidden" name="author" id="author" />
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <textarea
+            type="text"
+            name="body"
+            class="form-control"
+            placeholder="Your Message *"
+            style="width: 100%; height: 150px"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+  <script>
+    let info = JSON.parse(localStorage.getItem("info"));
+    let tokenInput = document.getElementById("token");
+    tokenInput.value = info.token;
+    let authorName = document.getElementById("author");
+    authorName.value = info.username;
+
+    //console.log(author.value)
+  </script>
+</div>
